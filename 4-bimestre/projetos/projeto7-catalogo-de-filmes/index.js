@@ -1,5 +1,4 @@
 // CRIE UMA LÓGICA ABAIXO
-// FILMES (mantidos iguais, só substituídos pelos seus)
 let filme1 = {
     titulo: "Tropa de Elite", 
     genero: "Ação", 
@@ -61,19 +60,18 @@ let filme10 = {
     avaliacao: 8
 }
 
-// Biblioteca refatorada
 const arquivoCinematografico = {
     filme1, filme2, filme3, filme4, filme5,
     filme6, filme7, filme8, filme9, filme10
 }
 
-// Lista de notas
+
 const conjuntoNotas = [
     filme1.avaliacao, filme2.avaliacao, filme3.avaliacao, filme4.avaliacao, filme5.avaliacao,
     filme6.avaliacao, filme7.avaliacao, filme8.avaliacao, filme9.avaliacao, filme10.avaliacao
 ]
 
-// Maior nota
+
 let notaMaxima = conjuntoNotas[0]
 for (let indice = 1; indice < conjuntoNotas.length; indice++) {
     if (conjuntoNotas[indice] > notaMaxima) {
@@ -83,11 +81,9 @@ for (let indice = 1; indice < conjuntoNotas.length; indice++) {
 
 let indiceMelhor = conjuntoNotas.indexOf(notaMaxima) + 1
 
-// Média
 let somaValores = conjuntoNotas.reduce((acc, atual) => acc + atual, 0)
 let mediaFinal = somaValores / conjuntoNotas.length
 
-// Saída
 console.log(`
     === Catálogo de Filmes ===
     1. ${filme1.titulo} - ${filme1.genero}
